@@ -2,8 +2,7 @@
   <v-app>
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Movie</span>
-        <!-- <span class="font-weight-light">MATERIAL DESIGN</span> -->
+        <span>Vue Example</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
     </v-app-bar>
@@ -15,15 +14,11 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld';
-
-export default {
-  name: 'App',
-  components: {
-    // HelloWorld,
-  },
-  data: () => ({
-    //
-  }),
-};
+  export default {
+    name: 'App',
+    components: {},
+    data: () => ({
+      //
+    }),
+  };
 </script>
