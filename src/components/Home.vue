@@ -1,68 +1,52 @@
 <template>
-  <v-container v-if="loading">
-    <div class="text-xs-center">
-      <v-progress-circular indeterminate :size="150" :width="8" color="green"></v-progress-circular>
-      <v-btn text
-      color="green"
-      @click="singleMovie('1')"
-      >View</v-btn>
-    </div>
-  </v-container>
-  <v-container v-else grid-list-xl>
-    <v-layout wrap>
-      <v-flex xs4
-      v-for="(item, index) in wholeResponse"
-      :key="index"
-      mb-2>
-        <v-card>
-          <v-img
-          :src="item.Poster"
-          aspect-ratio="1"
-          ></v-img>
-          <v-card-title primary-title>
-            <div>
-                <h2>{{item.Title}}</h2>
-                <div>Year: {{item.Year}}</div>
-                <div>Type: {{item.Type}}</div>
-                <div>IMDB-id: {{item.imdbID}}</div>
-            </div>
-          </v-card-title>
-          <v-card-actions class="justify-center">
-            <v-btn text
-            color="green"
-            @click="singleMovie(item.imdbID)"
-            >View</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <div>
+    <v-app-bar app>
+      <v-toolbar-title class="title align-center justify-center layout text-center">
+        <span>{{ $route.name }}</span>
+      </v-toolbar-title>
+    </v-app-bar>
+    <v-content class="grey lighten-3">
+      <v-container>
+        <v-row>
+          <v-col class="align-center justify-center layout text-center" cols="12" sm="12" md="12" >
+            <v-avatar>
+              <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
+            </v-avatar>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col class="d-flex flex-column mb-6 align-center justify-center layout text-center" cols="12" sm="12" md="12">
+            <span class="body-1">Wahyu Taufik</span>
+            <span class="caption">wahyutaufik37@gmail.com</span>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-content>
+    <v-bottom-navigation app inset >
+      <v-btn value="recent" to="list/1">
+        <span>List</span>
+        <v-icon>mdi-view-list</v-icon>
+      </v-btn>
+
+      <v-btn value="favorites">
+        <span>Favorites</span>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <v-btn value="nearby">
+        <span>Nearby</span>
+        <v-icon>mdi-map-marker</v-icon>
+      </v-btn>
+    </v-bottom-navigation>
+  </div>
 </template>
 <script>
-// import axios from 'axios'
 export default {
   data () {
-    return {
-      wholeResponse: [],
-      loading: true
-    }
+    return {}
   },
-  mounted () {
-//   axios
-//     .get('http://www.omdbapi.com/?s=indiana&apikey=XXXX&page=1&type=movie&Content-Type=application/json')
-//     .then(response => {
-//       this.wholeResponse = response.data.Search
-//       this.loading = false
-//     })
-//     .catch(error => {
-//       console.log(error)
-//     })
-  },
-  methods: {
-    singleMovie (id) {
-      this.$router.push('/movie/' + id)
-    }
-  }
+  mounted () {},
+  methods: {}
 }
 </script>
 

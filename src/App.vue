@@ -1,15 +1,6 @@
 <template>
-  <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vue Example</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-    </v-app-bar>
-
-    <v-content>
-      <router-view></router-view>
-    </v-content>
+  <v-app dark>
+    <router-view></router-view>
   </v-app>
 </template>
 
