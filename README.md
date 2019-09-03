@@ -1,5 +1,5 @@
 # vue-cordova-example
-[Vue Cordova Example](https://github.com/wahyutaufik/vue-cordova-example) example for Vue with Cordova.
+[Vue Cordova Example](https://github.com/wahyutaufik/vue-cordova-example) Build cordova-based applications with vue.
 
 Integrate Cordova into Vue Cli App With Vuetifyjs
 
